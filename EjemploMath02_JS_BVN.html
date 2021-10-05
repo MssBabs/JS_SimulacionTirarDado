@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Tirada Dado</title>
+    <style>
+        body, #header, #main, .imgDado, .boton{
+            display: flex;
+            flex-direction: column;   
+        }
+
+        body, .imgDado, .boton{
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #header, #main{
+            align-content: left;
+            justify-content: left;
+            text-align: left;
+        }
+
+        #header{ gap: 4rem;}
+        #main, .imgDado{ gap: 2rem;}
+        .boton{ size: 8rem;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simulación Tirada Dado</h1>
+        <h4>Simulación implementada con JavaScript</h4>
+    </header>
+
+    <main>
+        <h3>Descripción: </h3>
+        <p>En este Script "Simulación de JavaScript": </p>
+        <p>Hace que al tocar el boton sea como tirar un Dado, mostrará una imagen de una de las caras de esté,</p>
+        <p>dicha cara es generada por un entero, entre el 1 y el 6, de forma aleatoria.</p>
+    </main>
+    
+
+    <!-------------- Inicio Script -------------->
+
+    <div id="imgDado">
+        <img  src="" name="dado" width="84" height="89">
+    </div>
+
+    <div id="boton">
+        <form>
+            <input type="button" value="Tirar Dado" onClick="tirardado()">
+        </form>
+    </div>
+
+
+    <script>
+        function tirardado(){
+            var random= Math.floor(Math.random() * (7 - 1)) + 1;
+            document.images["dado"].src="Cara"+ random + ".jpg";
+        }
+    </script>
+
+    <!-------------- fin Script ----------------->
+</body>
+</html>
